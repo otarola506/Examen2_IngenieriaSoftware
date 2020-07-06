@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.1169
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Examen2_Pizza", "Examen2_Pizza\Examen2_Pizza.csproj", "{36ACAADC-74FA-464E-851B-B14624DA0CB1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestExamen2_Pizza", "UnitTestExamen2_Pizza\UnitTestExamen2_Pizza.csproj", "{633D948B-0A84-46D2-9354-51CE41C98E1F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{36ACAADC-74FA-464E-851B-B14624DA0CB1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36ACAADC-74FA-464E-851B-B14624DA0CB1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36ACAADC-74FA-464E-851B-B14624DA0CB1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36ACAADC-74FA-464E-851B-B14624DA0CB1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{633D948B-0A84-46D2-9354-51CE41C98E1F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{633D948B-0A84-46D2-9354-51CE41C98E1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{633D948B-0A84-46D2-9354-51CE41C98E1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{633D948B-0A84-46D2-9354-51CE41C98E1F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3F13F1E8-23C3-4F00-97E0-A69DBB5C1CA6}
+	EndGlobalSection
+EndGlobal
