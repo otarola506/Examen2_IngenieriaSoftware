@@ -11,7 +11,16 @@ body {
     padding-left: 15px;
     padding-right: 15px;
 }
+.pizzaGeneral {
+    height: 400px;
+    width: 50%;
+}
 
+.check {
+    position:absolute;
+    right:300px;
+    top:30px;
+}
 /* Carousel */
 .carousel-caption p {
     font-size: 20px;
