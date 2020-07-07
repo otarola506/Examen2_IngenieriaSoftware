@@ -6,11 +6,11 @@
 
 <div class="text-center">
     <h2>Desglose Final Orden</h2>
-    <label> Su orden es:</label> <br/>
+    <label> Su orden es:</label> <br />
     <label>Tamaño de la Pizza: @Model.Tamanio</label><br />
     <label>Masa: @Model.Masa</label><br />
     <label>Ingredientes:</label><br />
-     <ul>
+    <ul>
         @for (int i = 0; i < Model.Ingredientes.Length; i++)
         {
             <li>@Model.Ingredientes[i]</li>
@@ -23,8 +23,15 @@
         <li>Envío: 700</li>
         <li>Precio total: @Model.PrecioFinal</li>
     </ul>
-    
 
+    <a asp-page="/Index" class="btn btn-default">Volver</a>
+    <button type="submit" class="btn btn-primary" id="btnProcesar">Procesar</button>
+   
+    <br/> <br/>
+    <div  id="myAlert"class="alert alert-dismissible alert-success collapse">
+        <button  type="button" class="close" data-dismiss="alert">&times;</button>
+        <strong>¡Su orden ha sido procesada!</strong> en cuestión de minutos la mejor pizza de Costa Rica estará en su puerta.
+    </div>
 </div>
 
 

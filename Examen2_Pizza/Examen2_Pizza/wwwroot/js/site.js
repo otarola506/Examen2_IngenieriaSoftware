@@ -2,10 +2,12 @@
 // for details on configuring this project to bundle and minify static web assets.
 
 // Write your Javascript code.
-$('.btnNext').click(function () {
-    $('.nav-tabs > .active').next('li').find('a').trigger('click');
+$(document).ready(function () {
+    $('#btnProcesar').click(function () {
+        $('#myAlert').show('fade');
+
+    });
+
 });
 
-$('.btnPrevious').click(function () {
-    $('.nav-tabs > .active').prev('li').find('a').trigger('click');
-});
+

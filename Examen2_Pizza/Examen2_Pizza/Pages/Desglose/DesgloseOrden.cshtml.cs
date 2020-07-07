@@ -40,5 +40,9 @@ namespace Examen2_Pizza.Pages.Desglose
            
 
         }
+        public void OnPost()
+        {
+
+        }
     }
 }
