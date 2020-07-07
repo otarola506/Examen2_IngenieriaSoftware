@@ -16,12 +16,41 @@ namespace UnitTestExamen2_Pizza
         }
 
         [TestMethod]
-        public void CalculoPrecioSinImpuestoCorrecto()
+        public void CalculoPrecioSinImpuestoCorrectoPequena()
         {
             OrdenModel Order = new OrdenModel();
-            double precio =Order.CalculoPrecioSinImpuesto(4, "Mediana");
-            Assert.AreEqual(7900,precio);
+            double precio =Order.CalculoPrecioSinImpuesto(4, "Pequeña");
+            Assert.AreEqual(4700,precio);
 
         }
+
+        [TestMethod]
+        public void CalculoPrecioSinImpuestoCorrectoMediana()
+        {
+            OrdenModel Order = new OrdenModel();
+            double precio = Order.CalculoPrecioSinImpuesto(3, "Mediana");
+            Assert.AreEqual(5050, precio);
+
+        }
+
+        [TestMethod]
+        public void CalculoPrecioSinImpuestoCorrectoGrande()
+        {
+            OrdenModel Order = new OrdenModel();
+            double precio = Order.CalculoPrecioSinImpuesto(5, "Grande");
+            Assert.AreEqual(8350, precio);
+
+        }
+
+        [TestMethod]
+        public void CalculoImpuestoCorrecto()
+        {
+            OrdenModel Order = new OrdenModel();
+            double Impuesto = Order.CalculoImpuesto(8500);
+            Assert.AreEqual(1105, Impuesto);
+        }
+
+       
+
     }
 }
