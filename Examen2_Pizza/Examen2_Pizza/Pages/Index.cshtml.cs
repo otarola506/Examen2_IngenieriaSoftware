@@ -13,5 +13,10 @@ namespace Examen2_Pizza.Pages
         {
 
         }
+        public void OnPost()
+        {
+
+
+        }
     }
 }

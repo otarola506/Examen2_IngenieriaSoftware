@@ -4,123 +4,104 @@
     ViewData["Title"] = "Home page";
 }
 <h2>¡Las Famosas pizzas personalizadas de 2 x 1! </h2>
-<ul class="nav nav-tabs">
-    <li class="active"><a href="#ingredientes" data-toggle="tab" aria-expanded="true">Seleccione Ingredientes.</a></li>
-    <li ><a href="#entrega" data-toggle="tab" aria-expanded="false">Dirección Entrega</a></li>
-    <li><a href="#desglose" data-toggle="tab" aria-expanded="false">Desglose Final</a></li>
-</ul>
-
-<div id="myTabContent" class="tab-content">
-    <div class="tab-pane fade active in" id="ingredientes">
-        <div class="row">
-            <div class="col-md-6">
-                <img src="~/images/VariedadPizzas.jpg" class="pizzaGeneral">
-            </div>
-            <div class="col-md-6">
-                <h4>Selecciones sus opciones preferidas:</h4>
-                <h5>Tamaño de la Pizza:</h5>
-                <div class="radio">
-                    <input type="radio" id="pequena" name="tamanio" value="pequena"
-                           checked>
-                    <label for="pequena">Pequeña</label>
-                </div>
-
-                <div class="radio">
-                    <input type="radio" id="mediana" name="tamanio" value="mediana">
-                    <label for="mediana">Mediana</label>
-                </div>
-
-                <div class="radio">
-                    <input type="radio" id="grande" name="tamanio" value="grande">
-                    <label for="grande">Grande</label>
-                </div>
-                <br />
-                <h5>Masa:</h5>
-                <div class="radio">
-                    <input type="radio" id="delgada" name="masa" value="delgada">
-                    <label for="delgada">Delgada</label>
-                </div>
-
-                <div class="radio">
-                    <input type="radio" id="gruesa" name="masa" value="gruesa">
-                    <label for="gruesa">Gruesa</label>
-                </div>
-                <div class="check" style="position:absolute; right:300px; top:30px;">
-                    <h5>Ingredientes:</h5>
-                    <div class="checkbox">
-                        <label>
-                            <input type="checkbox" id="ing1" name="ing1" value="jamon"> Jamón
-                        </label>
-                    </div>
-                    <div class="checkbox">
-                        <label>
-                            <input type="checkbox" id="ing2" name="ing2" value="Hongos"> Hongos
-                        </label>
-                    </div>
-                    <div class="checkbox">
-                        <label>
-                            <input type="checkbox" id="ing3" name="ing3" value="Pepperoni"> Pepperoni
-                        </label>
-                    </div>
-                    <div class="checkbox">
-                        <label>
-                            <input type="checkbox" id="ing4" name="ing4" value="Piña"> Piña
-                        </label>
-                    </div>
-                    <div class="checkbox">
-                        <label>
-                            <input type="checkbox" id="ing5" name="ing5" value="Jalapeños"> Jalapeños
-                        </label>
-                    </div>
-                    <div class="checkbox">
-                        <label>
-                            <input type="checkbox" id="ing6" name="ing6" value="Carne"> Carne
-                        </label>
-                    </div>
-                    <div class="checkbox">
-                        <label>
-                            <input type="checkbox" id="ing7" name="ing7" value="Cebolla"> Cebolla
-                        </label>
-                    </div>
-                    <div class="checkbox">
-                        <label>
-                            <input type="checkbox" id="ing8" name="ing8" value="Pollo"> Pollo
-                        </label>
-                    </div>
-                    <div class="checkbox">
-                        <label>
-                            <input type="checkbox" id="ing9" name="ing9" value="Camarones"> Camarones
-                        </label>
-                    </div>
-                    <div class="checkbox">
-                        <label>
-                            <input type="checkbox" id="ing10" name="ing10" value="Chorizo"> Chorizo
-                        </label>
-                    </div>
-                </div>
-            </div>
-            <ul class="pager" >
-                <li><a class="btnNext" style="position:absolute;right:400px; bottom:30px;">Next</a></li>
-            </ul>
+<form method="post" >
+    <div class="row">
+        <div class="col-lg-5">
+            <img src="~/images/VariedadPizzas.jpg" class="pizzaGeneral">
         </div>
-        
+        <div class="col-lg-3">
+            <h4>Selecciones sus opciones preferidas:</h4>
+            <h5>Tamaño de la Pizza:</h5>
+            <div class="radio">
+                <input type="radio" id="pequena" name="tamanio" value="pequena"
+                       checked>
+                <label for="pequena">Pequeña</label>
+            </div>
+            <div class="radio">
+                <input type="radio" id="mediana" name="tamanio" value="mediana">
+                <label for="mediana">Mediana</label>
+            </div>
+
+            <div class="radio">
+                <input type="radio" id="grande" name="tamanio" value="grande">
+                <label for="grande">Grande</label>
+            </div>
+            <br />
+            <h5>Masa:</h5>
+            <div class="radio">
+                <input type="radio" id="delgada" name="masa" value="delgada">
+                <label for="delgada">Delgada</label>
+            </div>
+            <div class="radio">
+                <input type="radio" id="gruesa" name="masa" value="gruesa">
+                <label for="gruesa">Gruesa</label>
+            </div>
+        </div>
+        <div class="col-lg-2">
+            <h5>Ingredientes:</h5>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" id="ing1" name="ing1" value="jamon"> Jamón
+                </label>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" id="ing2" name="ing2" value="Hongos"> Hongos
+                </label>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" id="ing3" name="ing3" value="Pepperoni"> Pepperoni
+                </label>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" id="ing4" name="ing4" value="Piña"> Piña
+                </label>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" id="ing5" name="ing5" value="Jalapeños"> Jalapeños
+                </label>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" id="ing6" name="ing6" value="Carne"> Carne
+                </label>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" id="ing7" name="ing7" value="Cebolla"> Cebolla
+                </label>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" id="ing8" name="ing8" value="Pollo"> Pollo
+                </label>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" id="ing9" name="ing9" value="Camarones"> Camarones
+                </label>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" id="ing10" name="ing10" value="Chorizo"> Chorizo
+                </label>
+            </div>
+        </div>
+
     </div>
-    <div class="tab-pane fade" id="entrega">
+    <div class="row">
         <label for="textArea" class="col-lg-2 control-label">Dirección de Entrega:</label>
         <div class="col-lg-10">
             <textarea class="form-control" rows="3" id="textArea"></textarea>
         </div>
-        <ul class="pager">
-            <li><a class="btnPrevious">Previous</a></li>
-            <li><a class="btnNext">Next</a></li>
-        </ul>
     </div>
-    <div class="tab-pane fade" id="desglose">
-        <p>Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit.</p>
-        <ul class="pager">
-            <li><a class="btnNext">Next</a></li>
-
-        </ul>
+    <br/>
+    <div class="row text-right">
+        <button type="reset" class="btn btn-default">Cancel</button>
+        <button type="submit" class="btn btn-primary">Submit</button>
     </div>
-<div/>
+</form>
 
