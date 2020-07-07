@@ -21,7 +21,6 @@ namespace Examen2_Pizza.Pages
             string Direccion = Request.Form["Direccion"];
 
 
-
         }
     }
 }
