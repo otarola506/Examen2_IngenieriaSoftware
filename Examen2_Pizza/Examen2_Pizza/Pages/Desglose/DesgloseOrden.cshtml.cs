@@ -14,11 +14,16 @@ namespace Examen2_Pizza.Pages.Desglose
         const string SessionKeyTamanio = "TamanioPizza";
         const string SessionKeyMasa = "MasaPizza";
         const string SessionKeyIngredientes = "IngredientesPizza";
+
         public string Tamanio;
         public string Masa;
         public string[] Ingredientes;
         public string Direccion;
+        public double PrecioSinImpuesto;
+        public double Impuesto;
+        public double PrecioFinal;
         public OrdenController Orden;
+
         public void OnGet()
         {
             Orden = new OrdenController();
@@ -26,7 +31,13 @@ namespace Examen2_Pizza.Pages.Desglose
             Masa = HttpContext.Session.GetString(SessionKeyMasa);
             string IngredientesString = HttpContext.Session.GetString(SessionKeyIngredientes);
             Ingredientes = Orden.ProcesarIngredientes(IngredientesString);
-
+            // Tripleta con el precio sin impuesto, el impuesto y el precio total.
+            var TripletaPrecio = Orden.CalculoPrecioTotalOrden(Ingredientes.Length, Tamanio);
+            PrecioSinImpuesto = TripletaPrecio.Item1;
+            Impuesto = TripletaPrecio.Item2;
+            PrecioFinal = TripletaPrecio.Item3;
+           
+           
 
         }
     }

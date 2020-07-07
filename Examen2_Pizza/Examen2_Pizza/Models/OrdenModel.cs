@@ -45,17 +45,14 @@ namespace Examen2_Pizza.Models
             return (PrecioSinImpuesto * 13) / 100; 
         }
 
-        public double PrecioFinal(double PrecioSinImpuesto)
-        {
-            //Envío de 700 colones.
-            return PrecioSinImpuesto + CalculoImpuesto(PrecioSinImpuesto) + 700;
-        }
 
-        public double CalculoPrecioFinal(string Ingredientes, string Tamanio)
-        {
-            string[] ListaIngredientes = ProcesarStringIngredientes(Ingredientes); 
-            double PrecioSinImpuesto = CalculoPrecioSinImpuesto(ListaIngredientes.Length, Tamanio);
-            return PrecioFinal(PrecioSinImpuesto);
+        public (double,double, double) CalculoPrecioTotalOrden(int CantidadIngredientes, string Tamanio)
+        { 
+            double PrecioSinImpuesto = CalculoPrecioSinImpuesto(CantidadIngredientes, Tamanio);
+            double Impuesto = CalculoImpuesto(PrecioSinImpuesto);
+            // 700 colones de envío.
+            double PrecioTotal = PrecioSinImpuesto + Impuesto + 700;
+            return (PrecioSinImpuesto,Impuesto,PrecioTotal);
         }
 
 

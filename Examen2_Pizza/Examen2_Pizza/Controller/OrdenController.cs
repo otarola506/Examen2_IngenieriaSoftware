@@ -16,5 +16,12 @@ namespace Examen2_Pizza.Controller
             return Orden.ProcesarStringIngredientes(Ingredientes);
 
         }
+
+        public (double,double,double) CalculoPrecioTotalOrden(int CantidadIngredientes,string Tamanio)
+        {
+            Orden = new OrdenModel();
+            return Orden.CalculoPrecioTotalOrden(CantidadIngredientes, Tamanio);
+
+        }
     }
 }
