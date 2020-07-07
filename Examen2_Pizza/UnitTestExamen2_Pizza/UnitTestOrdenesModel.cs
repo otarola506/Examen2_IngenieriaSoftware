@@ -9,7 +9,7 @@ namespace UnitTestExamen2_Pizza
         [TestMethod]
         public void ProcesarIngredientes()
         {
-            OrdenesModel order = new OrdenesModel();
+            OrdenModel order = new OrdenModel();
             string [] Ingredientes = order.ProcesarStringIngredientes("Jamón,Hongos,Jalapeños");
             string[] Esperado = { "Jamón", "Hongos", "Jalapeños" };
             CollectionAssert.AreEqual(Esperado, Ingredientes);

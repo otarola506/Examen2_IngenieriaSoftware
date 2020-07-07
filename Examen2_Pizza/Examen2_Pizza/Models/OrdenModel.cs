@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace Examen2_Pizza.Models
 {
-    public class OrdenesModel
+    public class OrdenModel
     {
         public string[] ProcesarStringIngredientes(string Ingredientes)
         {
