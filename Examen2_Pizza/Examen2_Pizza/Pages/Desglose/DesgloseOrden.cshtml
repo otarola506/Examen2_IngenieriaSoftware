@@ -10,9 +10,12 @@
     <label>Tamaño de la Pizza: @Model.Tamanio</label><br />
     <label>Masa: @Model.Masa</label><br />
     <label>Ingredientes:</label><br />
-    @for(int i = 0; i<Model.Ingredientes.Length; i++){
-        <label>@Model.Ingredientes[i]</label> <br />
-    }
+     <ul>
+        @for (int i = 0; i < Model.Ingredientes.Length; i++)
+        {
+            <li>@Model.Ingredientes[i]</li>
+        }
+    </ul>
 
 </div>
 

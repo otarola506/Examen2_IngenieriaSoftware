@@ -9,10 +9,19 @@ namespace UnitTestExamen2_Pizza
         [TestMethod]
         public void ProcesarIngredientes()
         {
-            OrdenModel order = new OrdenModel();
-            string [] Ingredientes = order.ProcesarStringIngredientes("Jamón,Hongos,Jalapeños");
+            OrdenModel Order = new OrdenModel();
+            string [] Ingredientes = Order.ProcesarStringIngredientes("Jamón,Hongos,Jalapeños");
             string[] Esperado = { "Jamón", "Hongos", "Jalapeños" };
             CollectionAssert.AreEqual(Esperado, Ingredientes);
+        }
+
+        [TestMethod]
+        public void CalculoPrecioSinImpuestoCorrecto()
+        {
+            OrdenModel Order = new OrdenModel();
+            double precio =Order.CalculoPrecioSinImpuesto(4, "Mediana");
+            Assert.AreEqual(7900,precio);
+
         }
     }
 }
