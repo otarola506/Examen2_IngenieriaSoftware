@@ -15,6 +15,11 @@ namespace Examen2_Pizza.Pages
         }
         public void OnPost()
         {
+            string Tamanio = Request.Form["Tamanio"];
+            string Masa = Request.Form["Masa"];
+            string Ingredientes = Request.Form["Ingredientes"];
+            string Direccion = Request.Form["Direccion"];
+
 
 
         }

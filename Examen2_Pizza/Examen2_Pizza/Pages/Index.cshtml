@@ -4,36 +4,38 @@
     ViewData["Title"] = "Home page";
 }
 <h2>¡Las Famosas pizzas personalizadas de 2 x 1! </h2>
-<form method="post" >
+<label for="recordatorio"> Recordatorio: Todas nuestras pizzas tiene como ingredientes base, la salsa de tomate y el queso.</label>
+<form method="post">
     <div class="row">
-        <div class="col-lg-5">
+        <div class="col-lg-6">
             <img src="~/images/VariedadPizzas.jpg" class="pizzaGeneral">
         </div>
         <div class="col-lg-3">
             <h4>Selecciones sus opciones preferidas:</h4>
+
             <h5>Tamaño de la Pizza:</h5>
             <div class="radio">
-                <input type="radio" id="pequena" name="tamanio" value="pequena"
+                <input type="radio" id="pequena" name="tamanio" value="Pequeña"
                        checked>
                 <label for="pequena">Pequeña</label>
             </div>
             <div class="radio">
-                <input type="radio" id="mediana" name="tamanio" value="mediana">
+                <input type="radio" id="mediana" name="tamanio" value="Mediana">
                 <label for="mediana">Mediana</label>
             </div>
 
             <div class="radio">
-                <input type="radio" id="grande" name="tamanio" value="grande">
+                <input type="radio" id="grande" name="tamanio" value="Grande">
                 <label for="grande">Grande</label>
             </div>
             <br />
             <h5>Masa:</h5>
             <div class="radio">
-                <input type="radio" id="delgada" name="masa" value="delgada">
+                <input type="radio" id="delgada" name="masa" value="Delgada">
                 <label for="delgada">Delgada</label>
             </div>
             <div class="radio">
-                <input type="radio" id="gruesa" name="masa" value="gruesa">
+                <input type="radio" id="gruesa" name="masa" value="Gruesa">
                 <label for="gruesa">Gruesa</label>
             </div>
         </div>
@@ -41,52 +43,52 @@
             <h5>Ingredientes:</h5>
             <div class="checkbox">
                 <label>
-                    <input type="checkbox" id="ing1" name="ing1" value="jamon"> Jamón
+                    <input type="checkbox" id="ing1" name="Ingredientes" value="jamon"> Jamón
                 </label>
             </div>
             <div class="checkbox">
                 <label>
-                    <input type="checkbox" id="ing2" name="ing2" value="Hongos"> Hongos
+                    <input type="checkbox" id="ing2" name="Ingredientes" value="Hongos"> Hongos
                 </label>
             </div>
             <div class="checkbox">
                 <label>
-                    <input type="checkbox" id="ing3" name="ing3" value="Pepperoni"> Pepperoni
+                    <input type="checkbox" id="ing3" name="Ingredientes" value="Pepperoni"> Pepperoni
                 </label>
             </div>
             <div class="checkbox">
                 <label>
-                    <input type="checkbox" id="ing4" name="ing4" value="Piña"> Piña
+                    <input type="checkbox" id="ing4" name="Ingredientes" value="Piña"> Piña
                 </label>
             </div>
             <div class="checkbox">
                 <label>
-                    <input type="checkbox" id="ing5" name="ing5" value="Jalapeños"> Jalapeños
+                    <input type="checkbox" id="ing5" name="Ingredientes" value="Jalapeños"> Jalapeños
                 </label>
             </div>
             <div class="checkbox">
                 <label>
-                    <input type="checkbox" id="ing6" name="ing6" value="Carne"> Carne
+                    <input type="checkbox" id="ing6" name="Ingredientes" value="Carne"> Carne
                 </label>
             </div>
             <div class="checkbox">
                 <label>
-                    <input type="checkbox" id="ing7" name="ing7" value="Cebolla"> Cebolla
+                    <input type="checkbox" id="ing7" name="Ingredientes" value="Cebolla"> Cebolla
                 </label>
             </div>
             <div class="checkbox">
                 <label>
-                    <input type="checkbox" id="ing8" name="ing8" value="Pollo"> Pollo
+                    <input type="checkbox" id="ing8" name="Ingredientes" value="Pollo"> Pollo
                 </label>
             </div>
             <div class="checkbox">
                 <label>
-                    <input type="checkbox" id="ing9" name="ing9" value="Camarones"> Camarones
+                    <input type="checkbox" id="ing9" name="Ingredientes" value="Camarones"> Camarones
                 </label>
             </div>
             <div class="checkbox">
                 <label>
-                    <input type="checkbox" id="ing10" name="ing10" value="Chorizo"> Chorizo
+                    <input type="checkbox" id="ing10" name="Ingredientes" value="Chorizo"> Chorizo
                 </label>
             </div>
         </div>
@@ -95,13 +97,13 @@
     <div class="row">
         <label for="textArea" class="col-lg-2 control-label">Dirección de Entrega:</label>
         <div class="col-lg-10">
-            <textarea class="form-control" rows="3" id="textArea"></textarea>
+            <textarea class="form-control" rows="3" id="textArea" name="Direccion"></textarea>
         </div>
     </div>
-    <br/>
+    <br />
     <div class="row text-right">
-        <button type="reset" class="btn btn-default">Cancel</button>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="reset" class="btn btn-default">Cancelar</button>
+        <button type="submit" class="btn btn-primary">Procesar</button>
     </div>
 </form>
 
