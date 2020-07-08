@@ -13,10 +13,10 @@ namespace Examen2_Pizza.Models
             return Ingredientes.Split(",");
 
         }
-        public bool ValidarDireccionIngredientes(string Direccion, string Ingredientes)
+        public bool ValidarInputsVacios(string Ingredientes,string Provincia,string Canton,string Distrito,string Direccion)
         {
             bool Validado = true;
-            if (Direccion.Equals("") || Ingredientes == null){
+            if (Ingredientes == null || Provincia.Equals("")||Canton.Equals("")||Distrito.Equals("") || Direccion.Equals("")){
                 Validado = false;
             }
             return Validado;

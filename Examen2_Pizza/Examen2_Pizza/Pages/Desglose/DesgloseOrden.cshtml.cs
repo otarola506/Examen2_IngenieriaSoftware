@@ -14,11 +14,17 @@ namespace Examen2_Pizza.Pages.Desglose
         const string SessionKeyTamanio = "TamanioPizza";
         const string SessionKeyMasa = "MasaPizza";
         const string SessionKeyIngredientes = "IngredientesPizza";
+        const string SessionKeyProvincia = "ProvinciaPizza";
+        const string SessionKeyCanton = "CantonPizza";
+        const string SessionKeyDistrito = "DistritoPizza";
         const string SessionKeyDireccion = "DireccionPizza";
 
         public string Tamanio;
         public string Masa;
         public string[] Ingredientes;
+        public string Provincia;
+        public string Canton;
+        public string Distrito;
         public string Direccion;
         public double PrecioSinImpuesto;
         public double Impuesto;
@@ -30,6 +36,9 @@ namespace Examen2_Pizza.Pages.Desglose
             Orden = new OrdenController();
             Tamanio = HttpContext.Session.GetString(SessionKeyTamanio);
             Masa = HttpContext.Session.GetString(SessionKeyMasa);
+            Provincia = HttpContext.Session.GetString(SessionKeyProvincia);
+            Canton = HttpContext.Session.GetString(SessionKeyCanton);
+            Distrito = HttpContext.Session.GetString(SessionKeyDistrito);
             Direccion = HttpContext.Session.GetString(SessionKeyDireccion);
             string IngredientesString = HttpContext.Session.GetString(SessionKeyIngredientes);
             Ingredientes = Orden.ProcesarIngredientes(IngredientesString);

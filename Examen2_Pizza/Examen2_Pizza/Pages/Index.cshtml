@@ -93,12 +93,35 @@
         </div>
 
     </div>
+    <h4>Dirección de Entrega:</h4>
+    <span class="label label-danger">@Model.Mensaje</span>
     <div class="row">
-        <span class="label label-danger">@Model.Mensaje</span>
-        <br />
-        <label for="textArea" class="col-lg-2 control-label">Dirección de Entrega:</label>
+        <label for="Provincia" class="col-lg-2 control-label">Provincia</label>
         <div class="col-lg-10">
-            <textarea class="form-control" rows="3" id="textArea" name="Direccion"></textarea>
+            <input type="text" class="form-control" name="Provincia" placeholder="Provincia" />
+        </div>
+
+    </div>
+    <br />
+    <div class="row">
+        <label for="Canton" class="col-lg-2 control-label">Cantón</label>
+        <div class="col-lg-10">
+            <input type="text" class="form-control" name="Canton" placeholder="Cantón" />
+        </div>
+
+    </div>
+    <br />
+    <div class="row">
+        <label for="Distrito" class="col-lg-2 control-label">Distrito</label>
+        <div class="col-lg-10">
+            <input type="text" class="form-control" name="Distrito" placeholder="Distrito" />
+        </div>
+    </div>
+    <div class="row">
+        <br />
+        <label for="textArea" class="col-lg-2 control-label">Dirección Específica:</label>
+        <div class="col-lg-10">
+            <textarea class="form-control" rows="3" id="textArea" name="Direccion" placeholder="Digite aquí la dirección específica de domicilio"></textarea>
         </div>
     </div>
     <br />

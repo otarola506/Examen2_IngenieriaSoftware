@@ -52,17 +52,23 @@ namespace UnitTestExamen2_Pizza
         }
 
         [TestMethod]
-        public void CalculoImpuestoCorrecto()
+        public void CalculoImpuestoCorrectoPrecioGrande()
         {
             OrdenModel Order = new OrdenModel();
-            double Impuesto = Order.CalculoImpuesto(8500);
-            Assert.AreEqual(1105, Impuesto);
+            double Impuesto = Order.CalculoImpuesto(16500);
+            Assert.AreEqual(2145, Impuesto);
         }
 
-       
+        [TestMethod]
+        public void CalculoImpuestoPrecioPequeno()
+        {
+            OrdenModel Order = new OrdenModel();
+            double Impuesto = Order.CalculoImpuesto(4200);
+            Assert.AreEqual(546, Impuesto);
+        }
 
         [TestMethod]
-        public void CalculoPrecioTotalOrden()
+        public void CalculoPrecioTotalOrdenPequena()
         {
             OrdenModel Order = new OrdenModel();
             var TripletaPrecio = Order.CalculoPrecioTotalOrden(7,"Pequeña");
@@ -74,56 +80,57 @@ namespace UnitTestExamen2_Pizza
             Assert.AreEqual(864.5, Math.Round(Impuesto, 2));
             Assert.AreEqual(8214.5, Math.Round(PrecioFinal, 2));
 
-
         }
-
         [TestMethod]
-        public void ValidarDireccionIngredienteCorrecta()
+        public void ValidarInputsQuePuedenEstarVaciosCorrecta()
         {
             OrdenModel Order = new OrdenModel();
-            bool resultado = Order.ValidarDireccionIngredientes("150 mts de la Escuela de la niña pochita","Jamón,Hongos");
+            bool resultado = Order.ValidarInputsVacios("Jamón,Hongos","San José","Escazú","San Rafael","150 mts de la bomba delta, casa porton verde");
 
-            Assert.IsTrue(resultado, "La prueba validando que la dirección y los ingredientes ingresados correctamente no sean vacios no pasó.");
+            Assert.IsTrue(resultado, "La prueba validando que los inputs que puede estar vacíos no lo estén no pasó.");
             
 
-
         }
 
         [TestMethod]
-        public void ValidarDireccionIncorrectaIngredientesCorrectos()
+        public void ValidarInputsQuePuedenEstarVaciosTodosVacios()
         {
             OrdenModel Order = new OrdenModel();
-            bool resultado = Order.ValidarDireccionIngredientes("", "Jamón,Hongos");
+            bool resultado = Order.ValidarInputsVacios(null, "", "", "", "");
 
-            Assert.IsFalse(resultado, "La prueba validando que la dirección ingresada incorrectamente y los ingredientes ingresados correctamente no pasó");
-
-
-
-        }
-
-        [TestMethod]
-        public void ValidarDireccionCorrectaIngredientesIncorrectos()
-        {
-            OrdenModel Order = new OrdenModel();
-            string Ingredientes = null;
-            bool resultado = Order.ValidarDireccionIngredientes("150 mts de la Escuela de la niña pochita", Ingredientes);
-
-            Assert.IsFalse(resultado, "La prueba validando que la dirección ingresada correctamente y los ingredientes ingresados incorrectamente no pasó");
-
+            Assert.IsFalse(resultado, "La prueba validando que los inputs que puede estar vacíos si lo estén no pasó.");
 
 
         }
 
         [TestMethod]
-        public void ValidarDireccionIncorrectosIngredientesIncorrectos()
+        public void ValidarInputsIngredientesVacios()
         {
             OrdenModel Order = new OrdenModel();
-            string Ingredientes = null;
-            bool resultado = Order.ValidarDireccionIngredientes("", Ingredientes);
+            bool resultado = Order.ValidarInputsVacios(null, "San José", "Escazú", "San Rafael", "150 mts de la bomba delta, casa porton verde");
 
-            Assert.IsFalse(resultado, "La prueba validando que la dirección ingresada incorrectamente y los ingredientes ingresados incorrectamente no pasó");
+            Assert.IsFalse(resultado, "La prueba validando que los ingredientes estén vacíos no pasó.");
 
 
+        }
+
+        [TestMethod]
+        public void ValidarInputDireccionVacio()
+        {
+            OrdenModel Order = new OrdenModel();
+            bool resultado = Order.ValidarInputsVacios("Jamón,Hongos", "San José", "Escazú", "San Rafael", "");
+
+            Assert.IsFalse(resultado, "La prueba validando que la direccion este vacío no pasó.");
+
+        }
+
+        [TestMethod]
+        public void ValidarInputProvinciaVacio()
+        {
+            OrdenModel Order = new OrdenModel();
+            bool resultado = Order.ValidarInputsVacios("Jamón,Hongos", "", "Escazú", "San Rafael", "");
+
+            Assert.IsFalse(resultado, "La prueba validando que la provincia este vacío no pasó.");
 
         }
 

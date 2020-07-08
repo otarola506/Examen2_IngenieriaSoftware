@@ -23,13 +23,19 @@ namespace Examen2_Pizza.Pages
             string Tamanio = Request.Form["Tamanio"];
             string Masa = Request.Form["Masa"];
             string Ingredientes = Request.Form["Ingredientes"];
-            string Direccion = Request.Form["Direccion"];
-            if (Order.ValidarDireccionIngredientes(Direccion, Ingredientes))
+            string Provincia = Request.Form["Provincia"];
+            string Canton = Request.Form["Canton"];
+            string Distrito = Request.Form["Distrito"];
+            string DireccionEspecifica = Request.Form["Direccion"];
+            if (Order.ValidarInputsVacios(Ingredientes,Provincia,Canton,Distrito,DireccionEspecifica))
             {
                 HttpContext.Session.SetString("TamanioPizza", Tamanio);
                 HttpContext.Session.SetString("MasaPizza", Masa);
                 HttpContext.Session.SetString("IngredientesPizza", Ingredientes);
-                HttpContext.Session.SetString("DireccionPizza", Direccion);
+                HttpContext.Session.SetString("ProvinciaPizza", Provincia);
+                HttpContext.Session.SetString("CantonPizza", Canton);
+                HttpContext.Session.SetString("DistritoPizza", Distrito);
+                HttpContext.Session.SetString("DireccionPizza", DireccionEspecifica);
                 return RedirectToPage("/Desglose/DesgloseOrden");
             }
             else {
