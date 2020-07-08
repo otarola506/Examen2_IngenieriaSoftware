@@ -4985,7 +4985,13 @@ a.thumbnail.active {
 }
 .alert-dismissable,
 .alert-dismissible {
-  padding-right: 35px;
+    padding-right: 35px;
+   
+}
+.alert-dismissible, .alert-success {
+    position: absolute;
+    right: 100px;
+    top: 100px
 }
 .alert-dismissable .close,
 .alert-dismissible .close {
