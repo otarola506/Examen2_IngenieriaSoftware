@@ -7,9 +7,19 @@ namespace Examen2_Pizza.Models
 {
     public class OrdenModel
     {
+       
         public string[] ProcesarStringIngredientes(string Ingredientes)
         {
             return Ingredientes.Split(",");
+
+        }
+        public bool ValidarDireccionIngredientes(string Direccion, string Ingredientes)
+        {
+            bool Validado = true;
+            if (Direccion.Equals("") || Ingredientes == null){
+                Validado = false;
+            }
+            return Validado;
 
         }
 

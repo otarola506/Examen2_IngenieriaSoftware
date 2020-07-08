@@ -10,6 +10,14 @@ namespace Examen2_Pizza.Controller
     {
         public OrdenModel Orden;
 
+        public bool ValidarDireccionIngredientes(string Direccion, string Ingredientes)
+        {
+
+            Orden = new OrdenModel();
+            return Orden.ValidarDireccionIngredientes(Direccion, Ingredientes);
+
+        }
+
         public string[] ProcesarIngredientes(string Ingredientes)
         {
             Orden = new OrdenModel();

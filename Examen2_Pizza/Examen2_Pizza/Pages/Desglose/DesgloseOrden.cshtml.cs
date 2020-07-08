@@ -14,6 +14,7 @@ namespace Examen2_Pizza.Pages.Desglose
         const string SessionKeyTamanio = "TamanioPizza";
         const string SessionKeyMasa = "MasaPizza";
         const string SessionKeyIngredientes = "IngredientesPizza";
+        const string SessionKeyDireccion = "DireccionPizza";
 
         public string Tamanio;
         public string Masa;
@@ -29,6 +30,7 @@ namespace Examen2_Pizza.Pages.Desglose
             Orden = new OrdenController();
             Tamanio = HttpContext.Session.GetString(SessionKeyTamanio);
             Masa = HttpContext.Session.GetString(SessionKeyMasa);
+            Direccion = HttpContext.Session.GetString(SessionKeyDireccion);
             string IngredientesString = HttpContext.Session.GetString(SessionKeyIngredientes);
             Ingredientes = Orden.ProcesarIngredientes(IngredientesString);
             // Tripleta con el precio sin impuesto, el impuesto y el precio total.
@@ -40,9 +42,6 @@ namespace Examen2_Pizza.Pages.Desglose
            
 
         }
-        public void OnPost()
-        {
-
-        }
+        
     }
 }

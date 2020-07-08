@@ -77,6 +77,56 @@ namespace UnitTestExamen2_Pizza
 
         }
 
+        [TestMethod]
+        public void ValidarDireccionIngredienteCorrecta()
+        {
+            OrdenModel Order = new OrdenModel();
+            bool resultado = Order.ValidarDireccionIngredientes("150 mts de la Escuela de la niña pochita","Jamón,Hongos");
+
+            Assert.IsTrue(resultado, "La prueba validando que la dirección y los ingredientes ingresados correctamente no sean vacios no pasó.");
+            
+
+
+        }
+
+        [TestMethod]
+        public void ValidarDireccionIncorrectaIngredientesCorrectos()
+        {
+            OrdenModel Order = new OrdenModel();
+            bool resultado = Order.ValidarDireccionIngredientes("", "Jamón,Hongos");
+
+            Assert.IsFalse(resultado, "La prueba validando que la dirección ingresada incorrectamente y los ingredientes ingresados correctamente no pasó");
+
+
+
+        }
+
+        [TestMethod]
+        public void ValidarDireccionCorrectaIngredientesIncorrectos()
+        {
+            OrdenModel Order = new OrdenModel();
+            string Ingredientes = null;
+            bool resultado = Order.ValidarDireccionIngredientes("150 mts de la Escuela de la niña pochita", Ingredientes);
+
+            Assert.IsFalse(resultado, "La prueba validando que la dirección ingresada correctamente y los ingredientes ingresados incorrectamente no pasó");
+
+
+
+        }
+
+        [TestMethod]
+        public void ValidarDireccionIncorrectosIngredientesIncorrectos()
+        {
+            OrdenModel Order = new OrdenModel();
+            string Ingredientes = null;
+            bool resultado = Order.ValidarDireccionIngredientes("", Ingredientes);
+
+            Assert.IsFalse(resultado, "La prueba validando que la dirección ingresada incorrectamente y los ingredientes ingresados incorrectamente no pasó");
+
+
+
+        }
+
 
     }
 }

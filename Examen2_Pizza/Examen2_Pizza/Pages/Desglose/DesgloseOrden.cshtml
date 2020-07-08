@@ -4,7 +4,7 @@
     ViewData["Title"] = "DesgloseOrden";
 }
 
-<div class="text-center">
+<div class="col">
     <h2>Desglose Final Orden</h2>
     <label> Su orden es:</label> <br />
     <label>Tamaño de la Pizza: @Model.Tamanio</label><br />
@@ -16,6 +16,8 @@
             <li>@Model.Ingredientes[i]</li>
         }
     </ul>
+    <label>Dirección Entrega</label><br />
+    <p >@Model.Direccion</p>
     <label>Precio:</label> <br />
     <ul>
         <li>Precio sin impuesto: @Model.PrecioSinImpuesto</li>
